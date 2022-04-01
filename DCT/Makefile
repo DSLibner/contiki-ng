@@ -6,12 +6,13 @@ WERROR := 1
 CFLAGS += -O3
 
 
-PROJECT_SOURCEFILES += %.c
+PROJECT_SOURCEFILES += fastdct8.c
+PROJECT_SOURCEFILES += dctMatrix.c
 
 CUSTOM_CFLAGS := -Wall
 CUSTOM_CFLAGS += -Wformat
 CUSTOM_CFLAGS += -std=c11
-CFLAGS += -lm
+TARGET_LIBFILES = -lm
 
 define CUSTOM_RULE_C_TO_O
 endef
